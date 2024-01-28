@@ -1,1 +1,4 @@
 @import url(../vendor/normalize.css);
+@import url(../blocks/page/page.scss);
+@import url(../blocks/root/root.scss);
+@import url(../blocks/header/header.scss);
