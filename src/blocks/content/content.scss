@@ -1,8 +1,32 @@
 .content {
-  color: #fff;
-  font-family: Inter;
-  font-size: 41.455px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
+  h1 {
+    color: #fff;
+    font-family: Inter;
+    font-size: 41.455px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+  }
+  ul {
+    all: unset;
+    display: flex;
+    li {
+      all: unset;
+      .title-conteiner {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        h2 {
+          color: #fff;
+          font-family: Inter;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+        }
+        .price {
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+      }
+    }
+  }
 }
