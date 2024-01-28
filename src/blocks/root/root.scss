@@ -2,11 +2,8 @@
   max-width: 1306px;
   max-height: 890px;
   margin: auto;
-  border-radius: 10px;
-  background: radial-gradient(
-    158.02% 50% at 50% 50%,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0.19) 83.33%,
-    #000 100%
-  );
+  border-radius: 12px;
+  background: linear-gradient(153deg, #36603e 35.82%, #1e262c 107.75%);
+  box-shadow: 0px -9.631px 86.681px 0px rgba(0, 0, 0, 0.1),
+    0px 23.115px 240.782px 0px rgba(0, 0, 0, 0.05);
 }
