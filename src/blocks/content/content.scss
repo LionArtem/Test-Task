@@ -82,6 +82,7 @@
     }
     .basic-conteiner {
       padding: 22px 60px 0px;
+      min-height: 360px;
       h3 {
         margin: 0px 0px 10px;
         color: #fff;
@@ -104,7 +105,7 @@
         display: flex;
         flex-direction: column;
         row-gap: 15px;
-        margin-bottom: 152px;
+        
         li {
           all: unset;
           display: flex;
@@ -128,7 +129,9 @@
       }
       button {
         all: unset;
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 100%;
         box-sizing: border-box;
         padding: 12px 22px;
@@ -143,6 +146,29 @@
         font-style: normal;
         font-weight: 500;
         line-height: 128.023%;
+
+        .button-img {
+          display: flex;
+          margin-left: 9.5px;
+          width: 16px;
+          height: 16px;
+          border-radius: 65.967px;
+          background: rgba(255, 255, 255, 0.6);
+        }
+        .button-img::after {
+          content: '';
+          display: block;
+          margin: auto;
+          width: 4px;
+          height: 6px;
+          background-repeat: no-repeat;
+          background-image: url(../../images/s.svg);
+          background-size: cover;
+        }
+      }
+      .button_color_red {
+        border: 0.864px solid #d66567;
+        background: #bc4749;
       }
     }
   }
