@@ -1,10 +1,11 @@
 .header {
   margin: 48px 34px 0px;
   display: flex;
+  align-items: center;
   .logo {
     display: flex;
     &::before {
-      content: "";
+      content: '';
       display: block;
       width: 23.5px;
       height: 15.5px;
@@ -36,6 +37,42 @@
         font-weight: 400;
         line-height: 128.023%;
       }
+      .list-nav_activ {
+        color: #fff;
+        font-weight: 600;
+      }
+    }
+  }
+  .auth {
+    margin-left: auto;
+    display: flex;
+    column-gap: 14px;
+    button {
+      all: unset;
+    }
+    .button-login {
+      color: rgba(255, 255, 255, 0.8);
+      font-family: Inter;
+      font-size: 12.091px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 128.023%;
+    }
+    .button-sign {
+      box-sizing: border-box;
+      text-align: center;
+      padding: 8.636px 13.818px;
+      border-radius: 7px;
+      border: 0.864px solid #d66567;
+      background: #bc4749;
+      width: 114px;
+      height: 39px;
+      color: #fff;
+      font-family: Inter;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 128.023%;
     }
   }
 }

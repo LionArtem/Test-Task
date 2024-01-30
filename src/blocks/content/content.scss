@@ -20,7 +20,7 @@
       box-shadow: 0px 3.785px 94.621px 0px rgba(0, 0, 0, 0.25);
       .title-conteiner {
         padding: 0px 60px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
         h2 {
           color: #fff;
           font-family: Inter;
@@ -73,6 +73,9 @@
           margin: 15px 0px 27px;
         }
       }
+      .title-conteiner_border_solid {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
     }
     .card_color_green {
       background: #6a994e;
@@ -80,9 +83,12 @@
     .card_color_black {
       background: #1d252b;
     }
-    .basic-conteiner {
+    .list-conteiner {
       padding: 22px 60px 0px;
       min-height: 360px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       h3 {
         margin: 0px 0px 10px;
         color: #fff;
@@ -101,11 +107,11 @@
         font-weight: 500;
         line-height: 128.023%;
       }
-      .basic {
+      .list {
         display: flex;
         flex-direction: column;
         row-gap: 15px;
-        
+
         li {
           all: unset;
           display: flex;
@@ -125,6 +131,14 @@
             background-image: url(../../images/point.svg);
             background-repeat: no-repeat;
           }
+        }
+        .list_style_light {
+          color: rgba(255, 255, 255, 0.8);
+          font-family: Inter;
+          font-size: 13px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 128.023%;
         }
       }
       button {
@@ -169,6 +183,9 @@
       .button_color_red {
         border: 0.864px solid #d66567;
         background: #bc4749;
+      }
+      .button_margin_big {
+        margin-bottom: 13px;
       }
     }
   }
