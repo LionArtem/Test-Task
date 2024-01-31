@@ -73,6 +73,7 @@
           display: flex;
           border-bottom: 1px solid rgba(255, 255, 255, 0.1);
           padding-bottom: 8.5px;
+
           .dollar {
             color: #fff;
             font-family: Inter;
@@ -80,6 +81,10 @@
             font-style: normal;
             font-weight: 500;
             line-height: 128.023%;
+            cursor: pointer;
+            &:hover {
+              opacity: 0.8;
+            }
           }
           .number {
             color: #fff;
@@ -100,6 +105,10 @@
             font-weight: 400;
             line-height: normal;
             align-self: flex-end;
+            cursor: pointer;
+            &:hover {
+              opacity: 0.8;
+            }
           }
         }
         p {
@@ -212,6 +221,10 @@
         font-style: normal;
         font-weight: 500;
         line-height: 128.023%;
+        cursor: pointer;
+        &:hover {
+          opacity: 0.8;
+        }
 
         .button-img {
           display: flex;
