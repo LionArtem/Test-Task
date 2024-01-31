@@ -73,7 +73,8 @@
           display: flex;
           border-bottom: 1px solid rgba(255, 255, 255, 0.1);
           padding-bottom: 8.5px;
-
+          visibility: hidden;
+          opacity: 0;
           .dollar {
             color: #fff;
             font-family: Inter;
@@ -110,6 +111,11 @@
               opacity: 0.8;
             }
           }
+        }
+        .price-visibil {
+          visibility: visible;
+          opacity: 1;
+          transition: opacity 2s linear;
         }
         p {
           color: rgba(255, 255, 255, 0.8);
