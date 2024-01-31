@@ -17,6 +17,26 @@
     position: absolute;
     top: 30px;
   }
+  .vector-3 {
+    width: 338px;
+    height: 208px;
+    background-image: url(../../images/vector3.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -5px;
+    right: 0;
+    transform: translateX(20px);
+  }
+  .vector-4 {
+    width: 338px;
+    height: 208px;
+    background-image: url(../../images/vector4.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    transform: rotateY(180deg);
+  }
   h1 {
     color: #fff;
     font-family: Inter;
