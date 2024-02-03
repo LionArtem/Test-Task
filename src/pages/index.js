@@ -2,10 +2,17 @@ import './index.css';
 const currency = document.querySelectorAll('.currency');
 const price = document.querySelectorAll('.number');
 const period = document.querySelectorAll('.period');
-const listPriceDollars = {};
-for (let index = 0; index < price.length; index++) {
-  listPriceDollars[`dollar${index}`] = price[index].textContent;
-}
+
+const getOdjValue = (arr) => {
+  const obj = {};
+  for (let index = 0; index < arr.length; index++) {
+    obj[`dollar${index}`] = arr[index].textContent;
+  }
+  return obj;
+};
+
+const listPriceDollars = getOdjValue(price);
+let listCurrentPrice = getOdjValue(price);
 
 const courseDollarToRuble = 90;
 const coursDollarToEuro = 0.93;
@@ -31,6 +38,7 @@ const changeLabelCurrency = (value, arr, elemArr) => {
     });
   }
 };
+
 const changePrice = (arrElem, value, dollars) => {
   arrElem.forEach((elem, i) => {
     let newPrice = 0;
@@ -50,6 +58,7 @@ const changePrice = (arrElem, value, dollars) => {
     }
     elem.textContent = Math.round(newPrice);
   });
+  listCurrentPrice = getOdjValue(document.querySelectorAll('.number'));
 };
 
 const changeCurrency = (evt, dollars) => {
@@ -69,9 +78,23 @@ const chengeTextPeriod = (evt) => {
   });
 };
 
+const chengePriceForPeriod = (evt, price, currentPrice) => {
+  const period = evt.target.textContent;
+  price.forEach((elem, i) => {
+    console.log(period);
+    if (period === '/Months') {
+      elem.textContent = Math.round(currentPrice[`dollar${i}`] * 30);
+    } else if (period === '/Day') {
+      elem.textContent = Math.round(currentPrice[`dollar${i}`] / 30);
+    }
+    listCurrentPrice = getOdjValue(document.querySelectorAll('.number'));
+  });
+};
+
 const changePeriod = (evt) => {
   chengeTextPeriod(evt);
- 
+  console.log(listCurrentPrice);
+  chengePriceForPeriod(evt, price, listCurrentPrice);
 };
 
 currency.forEach((elem) => {
