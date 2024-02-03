@@ -1,6 +1,7 @@
 import './index.css';
 const currency = document.querySelectorAll('.currency');
 const price = document.querySelectorAll('.number');
+const period = document.querySelectorAll('.period');
 const listPriceDollars = {};
 for (let index = 0; index < price.length; index++) {
   listPriceDollars[`dollar${index}`] = price[index].textContent;
@@ -57,8 +58,28 @@ const changeCurrency = (evt, dollars) => {
   changePrice(price, currentCurrency, dollars);
 };
 
+const chengeTextPeriod = (evt) => {
+  const text = evt.target.textContent;
+  period.forEach((elem) => {
+    if (text === '/Months') {
+      elem.textContent = '/Day';
+    } else {
+      elem.textContent = '/Months';
+    }
+  });
+};
+
+const changePeriod = (evt) => {
+  chengeTextPeriod(evt);
+ 
+};
+
 currency.forEach((elem) => {
   elem.addEventListener('click', (evt) =>
     changeCurrency(evt, listPriceDollars)
   );
+});
+
+period.forEach((elem) => {
+  elem.addEventListener('click', (evt) => changePeriod(evt));
 });
