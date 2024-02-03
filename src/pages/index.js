@@ -1,10 +1,13 @@
 import './index.css';
 const currency = document.querySelectorAll('.currency');
 const price = document.querySelectorAll('.number');
+const listPriceDollars = {};
+for (let index = 0; index < price.length; index++) {
+  listPriceDollars[`dollar${index}`] = price[index].textContent;
+}
 
 const courseDollarToRuble = 90;
-const coursRubleToEuro = 0.01;
-const coursEuroToDollar = 1.08;
+const coursDollarToEuro = 0.93;
 
 window.addEventListener('load', () => {
   const price = document.querySelectorAll('.price');
@@ -27,32 +30,35 @@ const changeLabelCurrency = (value, arr, elemArr) => {
     });
   }
 };
-const changePrice = (arrElem, value) => {
-  arrElem.forEach((elem) => {
+const changePrice = (arrElem, value, dollars) => {
+  arrElem.forEach((elem, i) => {
     let newPrice = 0;
     switch (value) {
       case '$':
-        newPrice = courseDollarToRuble * elem.textContent;
+        newPrice = courseDollarToRuble * dollars[`dollar${i}`];
         break;
       case '₽':
-        newPrice = coursRubleToEuro * elem.textContent;
+        newPrice = coursDollarToEuro * dollars[`dollar${i}`];
         break;
       case '€':
-        newPrice = coursEuroToDollar * elem.textContent;
+        newPrice = dollars[`dollar${i}`];
         break;
       default:
         newPrice = 0;
         break;
     }
-    elem.textContent = Math.floor(newPrice);
+    elem.textContent = Math.round(newPrice);
   });
 };
-const changeCurrency = (evt) => {
+
+const changeCurrency = (evt, dollars) => {
   const currentCurrency = evt.target.textContent;
   changeLabelCurrency(currentCurrency, arrCurrency, currency);
-  changePrice(price, currentCurrency);
+  changePrice(price, currentCurrency, dollars);
 };
 
 currency.forEach((elem) => {
-  elem.addEventListener('click', (evt) => changeCurrency(evt));
+  elem.addEventListener('click', (evt) =>
+    changeCurrency(evt, listPriceDollars)
+  );
 });
