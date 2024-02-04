@@ -46,6 +46,13 @@
     line-height: normal;
     margin: 0px auto 69px;
   }
+
+  @media screen and (max-width: 655px) {
+    h1 {
+     text-align: center;
+    }
+  }
+
   .list-card {
     all: unset;
     display: flex;

@@ -10,3 +10,14 @@
   border: 1px solid red;
 }
 
+@media screen and (max-width: 730px) {
+  .page {
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .page {
+    padding: 0px;
+  }
+}

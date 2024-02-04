@@ -47,7 +47,20 @@
         font-weight: 600;
       }
     }
+
+    @media screen and (max-width: 480px) {
+      ul {
+        column-gap: 10px;
+      }
+    }
   }
+
+  @media screen and (max-width: 1010px) {
+    .navigation {
+      margin-left: 0;
+    }
+  }
+
   .auth {
     margin-left: auto;
     display: flex;
@@ -83,5 +96,26 @@
       font-weight: 500;
       line-height: 128.023%;
     }
+  }
+
+  @media screen and (max-width: 730px) {
+    .auth {
+      margin-left: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 1010px) {
+  .header {
+    justify-content: space-between;
+    column-gap: 20px;
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .header {
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 20px;
   }
 }
