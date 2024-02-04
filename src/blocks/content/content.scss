@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
+  width: 1306px;
   .vector-1 {
     width: 338px;
     height: 208px;
@@ -18,14 +19,13 @@
     top: 30px;
   }
   .vector-3 {
-    width: 338px;
+    width: 318px;
     height: 208px;
     background-image: url(../../images/vector3.svg);
     background-repeat: no-repeat;
     position: absolute;
     top: -5px;
     right: 0;
-    transform: translateX(20px);
   }
   .vector-4 {
     width: 338px;
@@ -49,7 +49,8 @@
   .list-card {
     all: unset;
     display: flex;
-    padding: 0px 160px 99px;
+    margin: 0px auto;
+    padding: 0px 0px 99px;
     .card {
       all: unset;
       width: 334px;
@@ -190,7 +191,7 @@
           font-weight: 500;
           line-height: 128.023%;
           &::before {
-            content: '';
+            content: "";
             margin-right: 7.5px;
             display: block;
             width: 6px;
@@ -241,7 +242,7 @@
           background: rgba(255, 255, 255, 0.6);
         }
         .button-img::after {
-          content: '';
+          content: "";
           display: block;
           margin: auto;
           width: 4px;
@@ -259,5 +260,23 @@
         margin-bottom: 13px;
       }
     }
+  }
+}
+
+@media screen and (max-width: 1310px) {
+  .vector-1 {
+    display: none;
+  }
+  .vector-2 {
+    display: none;
+  }
+  .vector-3 {
+    display: none;
+  }
+  .vector-4 {
+    display: none;
+  }
+  .content {
+    width: auto;
   }
 }
